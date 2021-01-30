@@ -1,0 +1,177 @@
+
+
+# from pathlib import Path
+
+import numpy as np
+
+# import cv2
+
+# import imutils
+
+import pandas as pd
+
+#from tqdm import tqdm
+
+# import PIL.Image as Image
+
+from IPython.display import clear_output
+
+#import seaborn as sns
+
+#from pylab import rcParams
+
+import matplotlib.pyplot as plt
+
+from matplotlib import rc
+
+from matplotlib.ticker import MaxNLocator
+
+#from sklearn.model_selection import train_test_split
+
+#from sklearn.metrics import confusion_matrix, classification_report
+
+from glob import glob
+
+import shutil
+import os
+# import watermark
+from collections import defaultdict
+
+import sys
+import argparse
+
+
+
+def print_split(func):
+    '''
+    Prints spliting diagnostics
+
+    Parameters:
+    ---------------
+    input_dir     see split_ files
+    out_dir
+    folder_names
+    split_size
+
+    Returns:
+    ----------
+
+    '''
+    def inner(*args, **kwargs):
+        func(*args, **kwargs)
+        file_names = args[2]
+        out_dir = args[1]
+        innerdict = {}
+        outerdict = {}
+        print('Print Split\n')
+        for data_path in file_names:
+            print(data_path)
+            for class_name in os.listdir(f'{out_dir}{data_path}'):
+                work_path = os.path.join(f'{out_dir}/{data_path}/{class_name}')
+                img_num = len(os.listdir(work_path))
+                innerdict[class_name] = img_num
+                print(f'{data_path}/{class_name} has {img_num} pictures')
+
+            outerdict[data_path] = innerdict
+            innerdict = {}
+
+
+        df = pd.DataFrame(outerdict).T
+
+        df.plot(kind="bar")
+        plt.show()
+
+    return inner
+
+
+@print_split
+def split_files(input_dir, out_dir,folder_names, split_sizes):
+
+    if sum(list(split_sizes.values())) > 1 :
+            raise Exception("Train and Validation should be < 1.0!")
+    else :
+        train_size, val_size = split_sizes.values()
+        val_size += train_size
+
+
+    for class_name in os.listdir(input_dir):
+
+        image_paths = np.array(glob(f'{input_dir}{class_name}/*'))
+
+        np.random.shuffle(image_paths)
+
+        ds_split = np.split(image_paths,
+                        indices_or_sections = [int(train_size * len(image_paths)), int(val_size*len(image_paths))]
+                           )
+
+
+        dataset_data = zip(folder_names, ds_split)
+
+        for ds, images in dataset_data:
+            for img_path in images:
+                shutil.copy(img_path, f'{out_dir}{ds}/{class_name.upper()}/')
+    print(f'Split files completed\n')
+
+# os.system('tree -d')
+
+# path = "/tmp/year/month/week/day"
+#
+# try:
+#     os.makedirs(SPLIT_DATA)
+# except OSError:
+#     print ("Creation of the directory %s failed" % path)
+# else:
+#     print ("Successfully created the directory %s" % path)
+
+
+DESCRIPTION = """SPLIT FILES TO TRAIN/VALID/TEST:
+$ python3 evaluate.py --train_size float \
+                      --valid_size float \
+"""
+
+def build_parser():
+
+    parser = argparse.ArgumentParser(description=DESCRIPTION)
+    parser.add_argument('--data_dir', type=str,
+                          help = 'directory of the data')
+    parser.add_argument('--train_size', type=float, default=0.7,
+                          help = 'percentage of train data')
+    parser.add_argument('--valid_size', type=float, default=0.2,
+                        help='percentage of valid data')
+
+    return parser
+
+def run():
+
+
+    parser = build_parser()
+    options = parser.parse_args()
+
+    data_dir = options.data_dir
+    train_size = options.train_size
+    valid_size =  options.valid_size
+
+    print(f'TRAIN SIZE: {train_size}|VALID SIZE: {valid_size}')
+
+    os.chdir(data_dir)
+
+    os.system('mkdir SPLIT_DATA')
+    os.system('mkdir SPLIT_DATA/TRAIN SPLIT_DATA/TEST SPLIT_DATA/VAL SPLIT_DATA/TRAIN/ASD SPLIT_DATA/TRAIN/CONTROL SPLIT_DATA/TEST/ASD SPLIT_DATA/TEST/CONTROL SPLIT_DATA/VAL/ASD SPLIT_DATA/VAL/CONTROL')
+
+
+    CURRENT_DIR = os.getcwd()
+
+    IMG_PATH = f'{CURRENT_DIR}/DATA/'
+
+    TARGET_PATH = f'{CURRENT_DIR}/SPLIT_DATA/'
+
+    FOLDER_NAMES = ['TRAIN', 'VAL', 'TEST']
+
+    SPLIT = {'train': train_size,
+             'validation' :valid_size}
+
+
+    split_files(IMG_PATH, TARGET_PATH, FOLDER_NAMES, SPLIT)
+
+if __name__ == '__main__':
+    run()
