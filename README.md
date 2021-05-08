@@ -15,7 +15,7 @@ This repository contains the code and visualizations of my master thesis in brai
 
 # Thesis goal
 
-
+In the present study the main aim is to use DL algorithms and develop a system than candistinguish between ASD and CON subjects using resting state fMRI data. 
 
 # Research questions
 
@@ -24,7 +24,15 @@ This repository contains the code and visualizations of my master thesis in brai
 - RQ3: What are the most important hyper-parameters for the classification accu-racy? More specifically we wish to know how many layers and filters to use.
 - RQ4:  Is the classification uncertainty reduced when training the 3D CNN withaugmentation, compared to when no augmentation is used?
 
+# Download the ABIDE dataset 
+
+
+
 # Thesis train scripts 
+
+The scripts used in the present thesis 
+
+
 
 ```python
 from mazeexplorer import MazeExplorer
