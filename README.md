@@ -48,33 +48,37 @@ Inside the scripts the parameters pipeline and strategy can be set. For a list o
 
 # Thesis train scripts 
 
-The scripts used in the present thesis 
+The scripts used in the present thesis are 3. Two scipts for combining different derivatives to multichanell volumes with/without augmentation and a script to train the CNN. 
 
 
+* [write_TfRecords_parser_no_aug]()
+
+A python scipt to combine different derivatives without augmentation.
 
 ```python
-from mazeexplorer import MazeExplorer
-
-train_env = MazeExplorer(number_maps=1,
-                         size=(15, 15),
-                         random_spawn=True,
-                         random_textures=False,
-                         keys=6)
-              
-test_env = MazeExplorer(number_maps=1,
-                        size=(15, 15),
-                        random_spawn=True,
-                        random_textures=False,
-                        keys=6)
-
-# training
-for _ in range(1000):
-    obs, rewards, dones, info = train_env.step(train_env.action_space.sample())
-    
-    
-# testing
-for _ in range(1000):
-    obs, rewards, dones, info = test_env.step(test_env.action_space.sample())
+$python write_TfRecords_parser_no_aug.py -h # for help
 ```
+
+* [write_TfRecords_parser_aug]()
+
+A python scipt to combine different derivatives and perform augmentations using multiprocessing for speedup.
+
+```python
+$python write_TfRecords_parser_aug.py -h # for help
+```
+
+The data from the above two sciprts are stored in TfRecords format.
+
+* [train_keras_augmentation_v2]()
+
+This scipt performs the grid search training using the TfRecods that created with one of the previous scipts. This scipts takes no arguments but inside the scipts different parameters can be set for the grid search (#convolutional layers, #dense nodes, e.t.c.) 
+
+```python
+$python train_keras_augmentation_v2.py 
+```
+
+
+
+
 
 
