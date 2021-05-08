@@ -2,7 +2,7 @@
 
 # Master Thesis LiU 
 
-<figure> <img src="https://github.com/quartermaine/Master-Thesis/blob/main/thesis%20images/Data/degree_binarize.png" width="300" height="200"/>  <figcaption>Fig.1.</figcaption>  </figure> <img src="https://github.com/quartermaine/Master-Thesis/blob/main/thesis%20images/Data/FMRI.jpg" width="300" height="200"/> <img src="https://github.com/quartermaine/Master-Thesis/blob/main/thesis%20images/Theory/NSjRyPyygz-derp.JPG" width="400" height ="300"/>0 <img src="https://github.com/quartermaine/Master-Thesis/blob/main/thesis%20images/Data/dual_regression.png" width="400" height ="300"/> 
+<img src="https://github.com/quartermaine/Master-Thesis/blob/main/thesis%20images/Data/degree_binarize.png" width="400" height="300"/> <img src="https://github.com/quartermaine/Master-Thesis/blob/main/thesis%20images/Data/FMRI.jpg" width="400" height="300"/> <img src="https://github.com/quartermaine/Master-Thesis/blob/main/thesis%20images/Theory/NSjRyPyygz-derp.JPG" width="400" height ="300"/>0 <img src="https://github.com/quartermaine/Master-Thesis/blob/main/thesis%20images/Data/dual_regression.png" width="400" height ="300"/> 
 
 
 
