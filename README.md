@@ -29,6 +29,10 @@ In the present study the main aim is to use DL algorithms and develop a system t
 # Download the ABIDE dataset 
 
 
+``` bash
+./download.sh
+```
+
 
 # Thesis train scripts 
 
