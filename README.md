@@ -71,7 +71,7 @@ The data from the above two sciprts are stored in TfRecords format.
 
 * [train_keras_augmentation_v2]()
 
-This scipt performs the grid search training using the TfRecods that created with one of the previous scipts. This scipts takes no arguments but inside the scipts different parameters can be set for the grid search (#convolutional layers, #dense nodes, e.t.c.) 
+This scipt performs the grid search training using the TfRecods that created with one of the previous scipts. The scipt takes no arguments but inside the code   different parameters can be set for the grid search (#convolutional layers, #dense nodes, e.t.c.) 
 
 ```python
 $python train_keras_augmentation_v2.py 
