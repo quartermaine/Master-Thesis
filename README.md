@@ -77,8 +77,14 @@ This scipt performs the grid search training using the TfRecods that created wit
 $python train_keras_augmentation_v2.py 
 ```
 
+# File structure 
 
-
-
++-- Code
++-- Train
+|   +-- DATA 
+|            +-- alff
+|       ...
+|            +-- vmhf
+|   +-- TfRecords
 
 
