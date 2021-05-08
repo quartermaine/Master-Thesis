@@ -256,7 +256,7 @@ with file :
                             x = BatchNormalization()(x)
                             x = MaxPooling3D(pool_size= (2, 2, 2))(x)
 
-                            # conv2
+                            # conv2 |<------ this block did not used in thesis due to memory error ------>|
                             x = Conv3D(nFilt*(2**(i+1)),
                                        kernel_size = (3, 3, 3),
                                        padding='same',
@@ -265,16 +265,16 @@ with file :
                             x = BatchNormalization()(x)
                             x = MaxPooling3D(pool_size= (2, 2, 2))(x)
 
-                        x = Conv3D(2, (3, 3), activation = 'relu', padding = 'same')(x)
+                        # x = Conv3D(2, (3, 3), activation = 'relu', padding = 'same')(x) # used in different model 
                         x = GlobalAveragePooling3D()(x)
-                        x = Activation('softmax')(x)
-                        # x = Flatten()(x)
+                        # x = Activation('softmax')(x) # used in different model 
+                        x = Flatten()(x)
 
-                        # for _ in range(1):
-                        #     # x = Dense(dense, activation='relu', name ='dense')(x)
-                        #     x = BatchNormalization()(x)
-                        #     x = myDropout(dropoutRate, name = 'mydropout')(x) # MC dropout
-                        x = myDropout(dropoutRate, nname = 'mydropout')(x)
+                        for _ in range(1):
+                             x = Dense(dense, activation='relu', name ='dense')(x)
+                             x = BatchNormalization()(x)
+                             x = myDropout(dropoutRate, name = 'mydropout')(x) # MC dropout
+
                         output = Dense(1, activation='sigmoid', name = 'out')(x)
 
                         model = Model(inputs=input, outputs=output)
@@ -333,10 +333,10 @@ with file :
                                 print('Best mean accuracy changed writing MC accuracies to file mc_accuracies')
                                 np.save(f'mc_accuracies_{derivative_names}', mc_accuracies)
                                 model.save(f'best_model_{derivative_names}.h5')
-                                # plot_model(model, to_file=f'best_model_plot_{derivative_names}.png')
+                                # plot_model(model, to_file=f'best_model_plot_{derivative_names}.png') # used to save png of best model
 
-                                # Save results to text file
-                                # accuracy = np.zeros((1,1))
+                            # Save results to text file
+                            # accuracy = np.zeros((1,1))
                             writer.writerow({'convLayers': convLayer ,
                                              'nFilts': nFilt,
                                              'dropoutRate': dropoutRate,
