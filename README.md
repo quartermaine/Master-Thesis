@@ -44,6 +44,7 @@ A bash scipt to download a list of derivatives as specified by ```listOfDerivati
 ./data_download_data.sh
 ```
 
+Inside the scripts the parameters pipeline and strategy can be set. For a list of the available pipelines and strategies refer [here](https://github.com/preprocessed-connectomes-project/abide/blob/master/download_abide_preproc_guide.txt)  
 
 # Thesis train scripts 
 
