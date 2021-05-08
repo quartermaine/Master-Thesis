@@ -79,13 +79,29 @@ $python train_keras_augmentation_v2.py
 
 # File structure 
 
+The directory and file structure  
+
 ```
 +-- Code
+|   +-- write_TfRecords_parser_aug.py
+|   +-- write_TfRecords_parser_no_aug.py
+|              .
+|              .
+|              .
+|   +-- train_keras_augmentation_v2.py
 +-- Train
 |   +-- DATA 
-|            +-- alff
-|       ...
-|            +-- vmhf
+|         +-- alff
+|              .
+|              .
+|              .
+|         +-- vmhf
 |   +-- TfRecords
+|         +-- dual_regression_aug    
+|         +-- falff_no_aug
+|              .
+|              .
+|              .
+|         +-- alff_degree_binarize_..._reho_vmhc_aug
 ```
 
