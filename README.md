@@ -1,7 +1,8 @@
 # Master Thesis LiU
 
 
-<img src="https://github.com/quartermaine/Master-Thesis/blob/main/thesis%20images/Data/degree_binarize.png" width="250" height="250"/> <img src="https://github.com/quartermaine/Master-Thesis/blob/main/thesis%20images/Data/FMRI.jpg" width="250" height="250"/> <img src="https://github.com/quartermaine/Master-Thesis/blob/main/thesis%20images/Theory/NSjRyPyygz-derp.JPG" width="250" height ="250"/>0 <img src="https://github.com/quartermaine/Master-Thesis/blob/main/thesis%20images/Data/dual_regression.png" width="250" height ="250"/>
+<img src="https://github.com/quartermaine/Master-Thesis/blob/main/thesis%20images/Data/degree_binarize.png" width="250" height="250"/> <img src="https://github.com/quartermaine/Master-Thesis/blob/main/thesis%20images/Data/FMRI.jpg" width="250" height="250"/> 
+<img src="https://github.com/quartermaine/Master-Thesis/blob/main/thesis%20images/Theory/NSjRyPyygz-derp.JPG" width="250" height ="250"/>0 <img src="https://github.com/quartermaine/Master-Thesis/blob/main/thesis%20images/Data/dual_regression.png" width="250" height ="250"/>
 
 
 This repository contains the code and visualizations of my master thesis in brain disease classification using multi-channel 3D convolutional neural networks. The thesis can be found [here](https://www.diva-portal.org/smash/record.jsf?dswid=1015&pid=diva2%3A1538345&c=1&searchType=SIMPLE&language=en&query=andreas+christopoulos+charitos&af=%5B%5D&aq=%5B%5B%5D%5D&aq2=%5B%5B%5D%5D&aqe=%5B%5D&noOfRows=50&sortOrder=author_sort_asc&sortOrder2=title_sort_asc&onlyFullText=false&sf=all).
