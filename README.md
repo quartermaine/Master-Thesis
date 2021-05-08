@@ -79,7 +79,7 @@ $python train_keras_augmentation_v2.py
 
 # File structure 
 
-The directory and file structure  
+The directory and file structure is shown below.
 
 ```
 +-- Code
@@ -104,4 +104,3 @@ The directory and file structure
 |              .
 |         +-- alff_degree_binarize_..._reho_vmhc_aug
 ```
-
