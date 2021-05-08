@@ -17,7 +17,7 @@ This repository contains the code and visualizations of my master thesis in brai
 
 # Thesis goal
 
-In the present study the main aim is to use DL algorithms and develop a system than candistinguish between ASD and CON subjects using resting state fMRI data. 
+In the present study the main aim is to use DL algorithms and develop a system than candistinguish between ASD and CON subjects using resting state fMRI data. The data used in this project is the [ABIDE](http://preprocessed-connectomes-project.org/abide/download.html) fMRI brain volume dataset which is freely available. 
 
 # Research questions
 
@@ -28,9 +28,20 @@ In the present study the main aim is to use DL algorithms and develop a system t
 
 # Download the ABIDE dataset 
 
+* [data_download_one_derivative.sh](https://github.com/quartermaine/Master-Thesis/blob/main/data_download_one_derivative.sh)
+
+A bash scipt to download a single derivative from ABIDE dataset
 
 ``` bash
-./download.sh
+./data_download_one_derivative.sh
+```
+
+* [](https://github.com/quartermaine/Master-Thesis/blob/main/data_download_one_derivative.sh)
+
+A bash scipt to download a list of derivatives as specified by ```listOfDerivatives="alff degree_binarize degree_weighted dual_regression eigenvector_binarize eigenvector_weighted falff lfcd reho vmhc"```
+
+``` bash
+./data_download_one_derivative.sh
 ```
 
 
