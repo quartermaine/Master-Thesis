@@ -8,7 +8,9 @@ This repository contains the code and visualizations of my master thesis in brai
 # Abstract
 
   Functional magnetic resonance imaging (fMRI) technology has been used in the investigation of human brain functionality and assist in brain disease diagnosis. While fMRIcan be used to model both spatial and temporal brain functionality, the analysis of the fMRIimages and the discovery of patterns for certain brain diseases is still a challenging task inmedical imaging.
+  
   Deep learning has been used more and more in medical field in an effort to furtherimprove disease diagnosis due to its effectiveness in discovering high-level features in im-ages. Convolutional neural networks (CNNs) is a class of deep learning algorithm thathave been successfully used in medical imaging and extract spatial hierarchical features. The application of CNNs in fMRI and the extraction of brain functional patterns is an openfield for research. This project focuses on how fMRIs can be used to improve Autism Spec-trum Disorders (ASD) detection and diagnosis with 3D resting-state functional MRI (rs-fMRI) images. ASDs are a range of neurodevelopment brain diseases that mostly affectsocial function. Some of the symptoms include social and communicating difficulties, andalso  restricted and repetitive behaviors. The symptoms appear on early childhood and tend to develop in time thus an early diagnosis is required.
+  
   Finding a proper model for identifying between ASD and healthy subject is a challenging task and involves a lot of hyper-parameter tuning. In this project a grid search approach is followed in the quest of the optimal CNN architecture. Additionally, regularization and augmentation techniques are implemented in an effort to further improve the models performance.
 
 # Thesis goal
