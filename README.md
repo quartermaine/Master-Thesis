@@ -1,4 +1,4 @@
-<img src="https://github.com/quartermaine/Master-Thesis/blob/main/LiU.jpeg" width="200" height="200"/>
+<img src="https://github.com/quartermaine/Master-Thesis/blob/main/LiU.jpeg" width="150" height="150"/>
 
 # Master Thesis LiU 
 
