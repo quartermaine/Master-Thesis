@@ -17,7 +17,7 @@ This repository contains the code and visualizations of my master thesis in brai
 
 # Thesis goal
 
-In the present study the main aim is to use DL algorithms and develop a system than candistinguish between ASD and CON subjects using resting state fMRI data. The data used in this project is the [ABIDE](http://preprocessed-connectomes-project.org/abide/download.html) fMRI brain volume dataset which is freely available. 
+In the present study the main aim is to use DL algorithms and develop a system than candistinguish between ASD and CON subjects using resting state fMRI data. The data used in this project is the [ABIDE](http://preprocessed-connectomes-project.org/abide/index.html) fMRI brain volume dataset which is freely available. 
 
 # Research questions
 
