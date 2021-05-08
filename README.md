@@ -4,7 +4,10 @@ This repository contains the code and visualizations of my master thesis in brai
 
 
 ![Data](https://github.com/quartermaine/Master-Thesis/blob/main/thesis%20images/Data/degree_binarize.png) ![fMRI](https://github.com/quartermaine/Master-Thesis/blob/main/thesis%20images/Data/FMRI.jpg) ![CNN](https://github.com/quartermaine/Master-Thesis/blob/main/thesis%20images/Theory/NSjRyPyygz-derp.JPG) 
-<img src="https://github.com/quartermaine/Master-Thesis/blob/main/thesis%20images/Theory/NSjRyPyygz-derp.JPG" width="200" />
+
+<img src="https://github.com/quartermaine/Master-Thesis/blob/main/thesis%20images/Data/degree_binarize.png" width="400" />
+<img src="https://github.com/quartermaine/Master-Thesis/blob/main/thesis%20images/Data/FMRI.jpg" width="400" />
+<img src="https://github.com/quartermaine/Master-Thesis/blob/main/thesis%20images/Theory/NSjRyPyygz-derp.JPG" width="400" />
 
 # Abstract
 
