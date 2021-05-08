@@ -28,7 +28,7 @@ In the present study the main aim is to use DL algorithms and develop a system t
 
 # Download the ABIDE dataset 
 
-* [data_download_one_derivative.sh](https://github.com/quartermaine/Master-Thesis/blob/main/data_download_one_derivative.sh)
+* [data_download_one_derivative.sh](https://github.com/quartermaine/Master-Thesis/blob/main/download%20data/data_download_one_derivative.sh)
 
 A bash scipt to download a single derivative from ABIDE dataset
 
@@ -36,12 +36,12 @@ A bash scipt to download a single derivative from ABIDE dataset
 ./data_download_one_derivative.sh
 ```
 
-* [](https://github.com/quartermaine/Master-Thesis/blob/main/data_download_one_derivative.sh)
+* [download_data.sh](https://github.com/quartermaine/Master-Thesis/blob/main/download%20data/download_data.sh)
 
 A bash scipt to download a list of derivatives as specified by ```listOfDerivatives="alff degree_binarize degree_weighted dual_regression eigenvector_binarize eigenvector_weighted falff lfcd reho vmhc"```
 
 ``` bash
-./data_download_one_derivative.sh
+./data_download_data.sh
 ```
 
 
