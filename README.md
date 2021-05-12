@@ -49,7 +49,7 @@ Inside the scripts the parameters pipeline and strategy can be set. For a list o
 
 # Thesis train scripts 
 
-The scripts used in the present thesis are 3. Two scipts for combining different derivatives to multichanell volumes with/without augmentation and a script to train the CNN. 
+The main scripts used in the present thesis are 3. Two scipts for combining different derivatives to multichanell volumes with/without augmentation and a script to train the CNN. 
 
 
 * [write_TfRecords_parser_no_aug]()
