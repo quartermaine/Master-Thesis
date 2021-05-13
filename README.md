@@ -1,8 +1,9 @@
-# Master Thesis LiU
+<img src="https://github.com/quartermaine/Master-Thesis/blob/main/LiU.jpeg" width="150" height="150"/>
 
+# Master Thesis LiU 
 
-<img src="https://github.com/quartermaine/Master-Thesis/blob/main/thesis%20images/Data/degree_binarize.png" width="400" height="300"/> <img src="https://github.com/quartermaine/Master-Thesis/blob/main/thesis%20images/Data/FMRI.jpg" width="400" height="300"/> 
-<img src="https://github.com/quartermaine/Master-Thesis/blob/main/thesis%20images/Theory/NSjRyPyygz-derp.JPG" width="400" height ="300"/>0 <img src="https://github.com/quartermaine/Master-Thesis/blob/main/thesis%20images/Data/dual_regression.png" width="400" height ="300"/>
+<img src="https://github.com/quartermaine/Master-Thesis/blob/main/thesis%20images/Data/degree_binarize.png" width="400" height="300"/> <img src="https://github.com/quartermaine/Master-Thesis/blob/main/thesis%20images/Data/FMRI.jpg" width="400" height="300"/> <img src="https://github.com/quartermaine/Master-Thesis/blob/main/thesis%20images/Theory/NSjRyPyygz-derp.JPG" width="400" height ="300"/>0 <img src="https://github.com/quartermaine/Master-Thesis/blob/main/thesis%20images/Data/dual_regression.png" width="400" height ="300"/> 
+
 
 
 This repository contains the code and visualizations of my master thesis in brain disease classification using multi-channel 3D convolutional neural networks. The thesis can be found [here](https://www.diva-portal.org/smash/record.jsf?dswid=1015&pid=diva2%3A1538345&c=1&searchType=SIMPLE&language=en&query=andreas+christopoulos+charitos&af=%5B%5D&aq=%5B%5B%5D%5D&aq2=%5B%5B%5D%5D&aqe=%5B%5D&noOfRows=50&sortOrder=author_sort_asc&sortOrder2=title_sort_asc&onlyFullText=false&sf=all). :octocat:
@@ -48,7 +49,7 @@ Inside the scripts the parameters pipeline and strategy can be set. For a list o
 
 # Thesis train scripts 
 
-The scripts used in the present thesis are 3. Two scipts for combining different derivatives to multichanell volumes with/without augmentation and a script to train the CNN. 
+The main scripts used in the present thesis are 3. Two scipts for combining different derivatives to multichanell volumes with/without augmentation and a script to train the CNN. 
 
 
 * [write_TfRecords_parser_no_aug]()
