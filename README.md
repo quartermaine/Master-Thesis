@@ -52,7 +52,7 @@ Inside the scripts the parameters pipeline and strategy can be set. For a list o
 The main scripts used in the present thesis are 3. Two scipts for combining different derivatives to multichanell volumes with/without augmentation and a script to train the CNN. 
 
 
-* [write_TfRecords_parser_no_aug]()
+* [write_TfRecords_parser_no_aug](https://github.com/quartermaine/Master-Thesis/blob/main/thesis%20code/write_TfRecords_parser_no_aug.py)
 
 A python scipt to combine different derivatives without augmentation.
 
@@ -60,7 +60,7 @@ A python scipt to combine different derivatives without augmentation.
 $python write_TfRecords_parser_no_aug.py -h # for help
 ```
 
-* [write_TfRecords_parser_aug]()
+* [write_TfRecords_parser_aug](https://github.com/quartermaine/Master-Thesis/blob/main/thesis%20code/write_TfRecords_parser_aug.py)
 
 A python scipt to combine different derivatives and perform augmentations using multiprocessing for speedup.
 
@@ -70,7 +70,7 @@ $python write_TfRecords_parser_aug.py -h # for help
 
 The data from the above two sciprts are stored in TfRecords format.
 
-* [train_keras_augmentation_v2]()
+* [train_keras_augmentation_v2](https://github.com/quartermaine/Master-Thesis/blob/main/thesis%20code/train_keras_augmentation_v2.py)
 
 This scipt performs the grid search training using the TfRecods that created with one of the previous scipts. The scipt takes no arguments but inside the code   different parameters can be set for the grid search (#convolutional layers, #dense nodes, e.t.c.) 
 
@@ -79,6 +79,8 @@ $python train_keras_augmentation_v2.py
 ```
 
 # File structure 
+The steps to perform the trainings are the following:
+- 
 
 The directory and file structure is shown below.
 
