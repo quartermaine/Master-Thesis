@@ -45,14 +45,16 @@ A bash scipt to download a list of derivatives as specified by ```listOfDerivati
 ./data_download_data.sh
 ```
 
-Inside the scripts the parameters pipeline and strategy can be set. For a list of the available pipelines and strategies refer [here](https://github.com/preprocessed-connectomes-project/abide/blob/master/download_abide_preproc_guide.txt)  
+Inside the scripts the parameters pipeline and strategy can be set. For a list of the available pipelines and strategies refer [here](https://github.com/preprocessed-connectomes-project/abide/blob/master/download_abide_preproc_guide.txt). 
+
+**Note: The scipts use the [asd_subjects.txt](https://github.com/quartermaine/Master-Thesis/blob/main/download%20data/asd_subjects.txt) and [control_subjects.txt](https://github.com/quartermaine/Master-Thesis/blob/main/download%20data/control_subjects.txt) to download the dataset and these files must be in the same directory when running the scripts.**
 
 # Thesis train scripts 
 
-The main scripts used in the present thesis are 3. Two scipts for combining different derivatives to multichanell volumes with/without augmentation and a script to train the CNN. 
+The main scripts used in the present thesis can be found on [thesis_code/Code](https://github.com/quartermaine/Master-Thesis/tree/main/thesis%20code/Code) file. The main scipts are 3, two scipts for combining different derivatives to multichanell volumes with/without augmentation and a script to train the CNN. 
 
 
-* [write_TfRecords_parser_no_aug](https://github.com/quartermaine/Master-Thesis/blob/main/thesis%20code/write_TfRecords_parser_no_aug.py)
+* [write_TfRecords_parser_no_aug.py](https://github.com/quartermaine/Master-Thesis/blob/main/thesis%20code/Code/write_TfRecords_parser_no_aug.py)
 
 A python scipt to combine different derivatives without augmentation.
 
@@ -60,7 +62,7 @@ A python scipt to combine different derivatives without augmentation.
 $python write_TfRecords_parser_no_aug.py -h # for help
 ```
 
-* [write_TfRecords_parser_aug](https://github.com/quartermaine/Master-Thesis/blob/main/thesis%20code/write_TfRecords_parser_aug.py)
+* [write_TfRecords_parser_aug.py](https://github.com/quartermaine/Master-Thesis/blob/main/thesis%20code/Code/write_TfRecords_parser_aug.py)
 
 A python scipt to combine different derivatives and perform augmentations using multiprocessing for speedup.
 
@@ -70,17 +72,31 @@ $python write_TfRecords_parser_aug.py -h # for help
 
 The data from the above two sciprts are stored in TfRecords format.
 
-* [train_keras_augmentation_v2](https://github.com/quartermaine/Master-Thesis/blob/main/thesis%20code/train_keras_augmentation_v2.py)
+* [train_keras_augmentation_v2.py](https://github.com/quartermaine/Master-Thesis/blob/main/thesis%20code/Code/train_keras_augmentation_v2.py)
 
 This scipt performs the grid search training using the TfRecods that created with one of the previous scipts. The scipt takes no arguments but inside the code   different parameters can be set for the grid search (#convolutional layers, #dense nodes, e.t.c.) 
 
 ```python
 $python train_keras_augmentation_v2.py 
 ```
+In addition, the following scipts contain helper functions for augmentations, preprocessing and evaluation:
+
+* [custom_utils.py](https://github.com/quartermaine/Master-Thesis/blob/main/thesis%20code/Code/custom_utils.py)
+
+* [datasets.py](https://github.com/quartermaine/Master-Thesis/blob/main/thesis%20code/Code/datasets.py)
+
+* [preprocessing.py](https://github.com/quartermaine/Master-Thesis/blob/main/thesis%20code/Code/preprocessing.py)
+
 
 # File structure 
-The steps to perform the trainings are the following:
-- 
+<!-- 
+In order to use the code I suggest the following steps:
+
+1. Download the file **[download data](https://github.com/quartermaine/Master-Thesis/tree/main/download%20data)** and run the [data_download_one_derivative.sh](https://github.com/quartermaine/Master-Thesis/blob/main/download%20data/data_download_one_derivative.sh) to download the desired data. The scipt dowloads the requested derivatives and stores them into a file named DATA. 
+
+2. Next, download the file **Code** that contains all the scipts to perform the TfRecords formation and the training.
+
+3.  -->
 
 The directory and file structure is shown below.
 
